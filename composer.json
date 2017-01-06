@@ -1,0 +1,27 @@
+{
+    "name": "rebelcode/bookings",
+    "description": "Bookings logic package for all RebelCode booking products.",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "RebelCode",
+            "email": "dev@rebelcode.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "RebelCode\\Bookings\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^5.3.9 | ^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "ptrofimov/xpmock": "^1.1",
+        "dhii/php-cs-fixer-config": "dev-php-5.3"
+    },
+    "repositories": []
+}
