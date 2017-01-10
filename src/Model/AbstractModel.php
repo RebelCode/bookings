@@ -86,9 +86,11 @@ abstract class AbstractModel extends DataObject implements ModelInterface
     }
 
     /**
-     * {@inheritdoc}
-     * 
+     * Sets the resource model instance.
+     *
      * @since [*next-version*]
+     *
+     * @param ResourceModelInterface $resourceModel The resource model instance.
      *
      * @return $this This instance.
      */
