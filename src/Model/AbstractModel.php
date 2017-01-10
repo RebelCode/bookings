@@ -39,7 +39,7 @@ abstract class AbstractModel extends DataObject implements ModelInterface
 
     /**
      * {@inheritdoc}
-     * 
+     *
      * @since [*next-version*]
      */
     public function getIdFieldName()
@@ -51,7 +51,7 @@ abstract class AbstractModel extends DataObject implements ModelInterface
 
     /**
      * Sets the ID field name.
-     * 
+     *
      * @since [*next-version*]
      *
      * @param string $idFieldName
@@ -93,7 +93,7 @@ abstract class AbstractModel extends DataObject implements ModelInterface
 
     /**
      * {@inheritdoc}
-     * 
+     *
      * @since [*next-version*]
      */
     public function getResourceModel()
