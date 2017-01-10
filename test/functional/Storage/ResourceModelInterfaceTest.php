@@ -24,7 +24,16 @@ class ResourceModelInterfaceTest extends \Xpmock\TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->methods()
+            ->getId()
+            ->getIdFieldName()
+            ->getData()
+            ->hasData()
+            ->setData()
+            ->unsData()
+            ->getResourceModel()
+            ->save()
+            ->load()
+            ->delete()
             ->new();
 
         return $mock;
