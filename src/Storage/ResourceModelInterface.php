@@ -2,14 +2,15 @@
 
 namespace RebelCode\Bookings\Storage;
 
-use RebelCode\Bookings\Model\ModelInterface;
+use \RebelCode\Bookings\Data\IdAwareDataObjectInterface;
+use \RebelCode\Bookings\Model\ModelInterface;
 
 /**
  * A resource model is responsible for handling.
  *
  * @since [*next-version*]
  */
-interface ResourceModelInterface
+interface ResourceModelInterface extends IdAwareDataObjectInterface
 {
     /**
      * Saves the model to storage.
