@@ -89,6 +89,38 @@ class AbstractModelTest extends TestCase
     }
 
     /**
+     * Tests the ID setter method with the field name left as default.
+     *
+     * @since [*next-version*]
+     */
+    public function testSetIdDefaultFieldName()
+    {
+        $subject = $this->createInstance();
+
+        $reflection = $this->reflect($subject);
+        $reflection->_setId(234);
+
+        $this->assertArraySubset(array('id' => 234), $reflection->data);
+    }
+
+    /**
+     * Tests the ID setter method with a pre-set field name.
+     *
+     * @since [*next-version*]
+     */
+    public function testSetIdPresetFieldName()
+    {
+        $subject = $this->createInstance();
+
+        $reflection              = $this->reflect($subject);
+        $reflection->idFieldName = 'some_key';
+
+        $reflection->_setId(234);
+
+        $this->assertArraySubset(array('some_key' => 234), $reflection->data);
+    }
+
+    /**
      * Tests the resource model getter method when no resource model has been set.
      *
      * @since [*next-version*]
