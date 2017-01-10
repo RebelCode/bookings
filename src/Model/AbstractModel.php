@@ -76,6 +76,22 @@ abstract class AbstractModel extends DataObject implements ModelInterface
     }
 
     /**
+     * Sets the ID.
+     *
+     * @since [*next-version*]
+     *
+     * @param int $id The ID.
+     *
+     * @return $this This instance.
+     */
+    protected function _setId($id)
+    {
+        $this->setData($this->getIdFieldName(), $id);
+
+        return $this;
+    }
+
+    /**
      * {@inheritdoc}
      * 
      * @since [*next-version*]
