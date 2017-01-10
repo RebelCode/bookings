@@ -9,7 +9,6 @@ namespace RebelCode\Bookings\Data\Test;
  */
 class IdAwareDataObjectInterfaceTest extends \Xpmock\TestCase
 {
-
     /**
      * The name of the test subject.
      */
@@ -52,5 +51,4 @@ class IdAwareDataObjectInterfaceTest extends \Xpmock\TestCase
         $this->assertInstanceOf('RebelCode\\Bookings\\Data\\DataWriteableInterface', $subject);
         $this->assertInstanceOf('RebelCode\\Bookings\\Data\\IdAwareInterface', $subject);
     }
-
 }
