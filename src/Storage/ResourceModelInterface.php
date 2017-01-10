@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Storage;
 
-use \RebelCode\Bookings\Model\ModelInterface;
+use RebelCode\Bookings\Model\ModelInterface;
 
 /**
  * A resource model is responsible for handling.
