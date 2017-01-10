@@ -9,7 +9,6 @@ namespace RebelCode\Bookings\Data\Test;
  */
 class DataObjectInterfaceTest extends \Xpmock\TestCase
 {
-
     /**
      * The name of the test subject.
      */
@@ -49,5 +48,4 @@ class DataObjectInterfaceTest extends \Xpmock\TestCase
         $this->assertInstanceOf('RebelCode\\Bookings\\Data\\DataReadableInterface', $subject);
         $this->assertInstanceOf('RebelCode\\Bookings\\Data\\DataWriteableInterface', $subject);
     }
-
 }

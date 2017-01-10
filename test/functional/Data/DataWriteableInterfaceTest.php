@@ -9,7 +9,6 @@ namespace RebelCode\Bookings\Data\Test;
  */
 class DataWriteableInterfaceTest extends \Xpmock\TestCase
 {
-
     /**
      * The name of the test subject.
      */
@@ -45,5 +44,4 @@ class DataWriteableInterfaceTest extends \Xpmock\TestCase
 
         $this->assertInstanceOf(static::TEST_SUBJECT_CLASSNAME, $subject);
     }
-
 }
