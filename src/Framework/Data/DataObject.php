@@ -1,6 +1,6 @@
 <?php
 
-namespace RebelCode\Bookings\Data;
+namespace RebelCode\Bookings\Framework\Data;
 
 /**
  * A data object: an object with an internal data set and data management methods.

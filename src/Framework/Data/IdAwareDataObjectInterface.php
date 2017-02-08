@@ -1,6 +1,6 @@
 <?php
 
-namespace RebelCode\Bookings\Data;
+namespace RebelCode\Bookings\Framework\Data;
 
 /**
  * A data object that can have an ID.

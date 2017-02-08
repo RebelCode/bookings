@@ -1,6 +1,6 @@
 <?php
 
-namespace RebelCode\Bookings\Data;
+namespace RebelCode\Bookings\Framework\Data;
 
 /**
  * A DataObject that allows retrieving and setting data via magic-calling virtual methods.
@@ -49,11 +49,11 @@ class MagicDataObject extends DataObject
                 return $result;
 
             case 'uns' :
-                $result = $this->unsetData($key);
+                $result = $this->unsData($key);
                 return $result;
 
             case 'has' :
-                return isset($this->_data[$key]);
+                return $this->hasData($key);
         }
 
         throw new \Exception(
