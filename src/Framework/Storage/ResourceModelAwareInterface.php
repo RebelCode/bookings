@@ -1,6 +1,6 @@
 <?php
 
-namespace RebelCode\Bookings\Storage;
+namespace RebelCode\Bookings\Framework\Storage;
 
 /**
  * Interface for objects that can have a resource model.

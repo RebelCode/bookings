@@ -1,8 +1,8 @@
 <?php
 
-namespace RebelCode\Bookings\Storage;
+namespace RebelCode\Bookings\Framework\Storage;
 
-use RebelCode\Bookings\Model\ModelInterface;
+use \RebelCode\Bookings\Framework\Model\ModelInterface;
 
 /**
  * A resource model is responsible for handling.
