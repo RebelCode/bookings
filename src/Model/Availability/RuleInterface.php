@@ -2,6 +2,7 @@
 
 namespace RebelCode\Bookings\Model\Availability;
 
+use \Dhii\Expression\ExpressionInterface;
 use \RebelCode\Bookings\Validation\BookingValidatorInterface;
 
 /**
@@ -9,6 +10,6 @@ use \RebelCode\Bookings\Validation\BookingValidatorInterface;
  *
  * @since [*next-version*]
  */
-interface RuleInterface extends BookingValidatorInterface
+interface RuleInterface extends BookingValidatorInterface, ExpressionInterface
 {
 }

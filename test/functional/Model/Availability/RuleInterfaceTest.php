@@ -51,7 +51,12 @@ class RuleInterfaceTest extends TestCase
 
         $this->assertInstanceOf(
             'RebelCode\\Bookings\\Validation\\BookingValidatorInterface', $subject,
-            'Subject is not a valid instance.'
+            'Subject is not a valid BookingValidatorInterface instance.'
+        );
+
+        $this->assertInstanceOf(
+            'RebelCode\\Bookings\\Validation\\ExpressionInterface', $subject,
+            'Subject is not a valid ExpressionInterface instance.'
         );
     }
 }
