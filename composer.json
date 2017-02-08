@@ -19,6 +19,7 @@
         "php": "^5.3.9 | ^7.0",
         "myclabs/php-enum": "^1.5",
         "yohang/finite": "^1.1",
+        "rebelcode/diary": "dev-task/api-refactoring_1",
         "container-interop/container-interop": "^1.1"
     },
     "require-dev": {
@@ -26,5 +27,22 @@
         "ptrofimov/xpmock": "^1.1",
         "dhii/php-cs-fixer-config": "dev-php-5.3"
     },
-    "repositories": []
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/RebelcodeCom/diary"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Dhii/espresso-abstract"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Dhii/espresso"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Dhii/espresso-logical"
+        }
+    ]
 }
