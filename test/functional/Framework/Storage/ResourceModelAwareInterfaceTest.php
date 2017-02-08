@@ -1,33 +1,32 @@
 <?php
 
-namespace RebelCode\Bookings\Data\Test;
+namespace RebelCode\Bookings\FuncTest\Framework\Storage;
 
 /**
- * Tests {@see \RebelCode\Bookings\Data\DataObjectInterface}.
+ * Tests {@see \RebelCode\Bookings\Framework\Storage\ResourceModelAwareInterface}.
  *
  * @since [*next-version*]
  */
-class DataObjectInterfaceTest extends \Xpmock\TestCase
+class ResourceModelAwareInterfaceTest extends \Xpmock\TestCase
 {
     /**
      * The name of the test subject.
+     *
+     * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Data\\DataObjectInterface';
+    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Framework\\Storage\\ResourceModelAwareInterface';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return \RebelCode\Bookings\Data\DataObjectInterface
+     * @return \RebelCode\Bookings\Framework\Storage\ResourceModelAwareInterface
      */
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->getData()
-            ->hasData()
-            ->setData()
-            ->unsData()
+            ->getResourceModel()
             ->new();
 
         return $mock;
@@ -36,8 +35,6 @@ class DataObjectInterfaceTest extends \Xpmock\TestCase
     /**
      * Tests whether a valid instance of the test subject can be created.
      *
-     * @covers \RebelCode\Bookings\Data\DataObjectInterface
-     *
      * @since [*next-version*]
      */
     public function testCanBeCreated()
@@ -45,7 +42,5 @@ class DataObjectInterfaceTest extends \Xpmock\TestCase
         $subject = $this->createInstance();
 
         $this->assertInstanceOf(static::TEST_SUBJECT_CLASSNAME, $subject);
-        $this->assertInstanceOf('RebelCode\\Bookings\\Data\\DataReadableInterface', $subject);
-        $this->assertInstanceOf('RebelCode\\Bookings\\Data\\DataWriteableInterface', $subject);
     }
 }

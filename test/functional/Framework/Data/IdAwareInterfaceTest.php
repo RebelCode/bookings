@@ -1,30 +1,35 @@
 <?php
 
-namespace RebelCode\Bookings\Storage\Test;
+namespace RebelCode\Bookings\FuncTest\Framework\Data;
+
+use \RebelCode\Bookings\Framework\Data\IdAwareInterface;
+use \Xpmock\TestCase;
 
 /**
- * Tests {@see \RebelCode\Bookings\Storage\ResourceModelAwareInterface}.
+ * Tests {@see \RebelCode\Bookings\Framework\Data\IdAwareInterface}.
  *
  * @since [*next-version*]
  */
-class ResourceModelAwareInterfaceTest extends \Xpmock\TestCase
+class IdAwareInterfaceTest extends TestCase
 {
     /**
      * The name of the test subject.
+     *
+     * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Storage\\ResourceModelAwareInterface';
+    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Framework\\Data\\IdAwareInterface';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return \RebelCode\Bookings\Storage\ResourceModelAwareInterface
+     * @return IdAwareInterface
      */
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->getResourceModel()
+            ->getId()
             ->new();
 
         return $mock;
@@ -33,14 +38,15 @@ class ResourceModelAwareInterfaceTest extends \Xpmock\TestCase
     /**
      * Tests whether a valid instance of the test subject can be created.
      *
-     * @covers \RebelCode\Bookings\Storage\ResourceModelAwareInterface
-     *
      * @since [*next-version*]
      */
     public function testCanBeCreated()
     {
         $subject = $this->createInstance();
 
-        $this->assertInstanceOf(static::TEST_SUBJECT_CLASSNAME, $subject);
+        $this->assertInstanceOf(
+            static::TEST_SUBJECT_CLASSNAME, $subject,
+            'Subject is not a valid instance.'
+        );
     }
 }

@@ -1,17 +1,31 @@
 <?php
 
-namespace RebelCode\Bookings\Test\Model;
+namespace RebelCode\Bookings\FuncTest\Framework\Model;
 
-use RebelCode\Bookings\Model\AbstractModel;
-use Xpmock\TestCase;
+use \RebelCode\Bookings\Framework\Model\AbstractModel;
+use \Xpmock\TestCase;
 
 /**
- * Description of AbstractModelTest.
+ * Tests {@see RebelCode\Bookings\Framework\Model\AbstractModel}.
  *
  * @since [*next-version*]
  */
 class AbstractModelTest extends TestCase
 {
+    /**
+     * The class name of the test subject.
+     *
+     * @since [*next-version*]
+     */
+    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Framework\\Model\\AbstractModel';
+
+    /**
+     * The class name of the abstract resource model interface.
+     *
+     * @since [*next-version*]
+     */
+    const RESOURCE_MODEL_CLASSNAME = 'RebelCode\\Bookings\\Framework\\Storage\\ResourceModelInterface';
+
     /**
      * Creates the test subject instance.
      *
@@ -21,10 +35,35 @@ class AbstractModelTest extends TestCase
      */
     public function createInstance()
     {
-        $mock = $this->mock('RebelCode\\Bookings\\Model\\AbstractModel')
+        $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
             ->new();
 
         return $mock;
+    }
+
+    /**
+     * Tests whether a valid instance of the test subject can be created.
+     *
+     * @since [*next-version*]
+     */
+    public function testCanBeCreated()
+    {
+        $subject = $this->createInstance();
+
+        $this->assertInstanceOf(
+            static::TEST_SUBJECT_CLASSNAME, $subject,
+            'Subject is not a valid instance.'
+        );
+
+        $this->assertInstanceOf(
+            'RebelCode\\Bookings\\Framework\\Data\\DataObject', $subject,
+            'Subject is not a valid DataObject instance.'
+        );
+
+        $this->assertInstanceOf(
+            'RebelCode\\Bookings\\Framework\\Data\\MagicDataObject', $subject,
+            'Subject is not a valid MagicDataObject instance.'
+        );
     }
 
     /**
@@ -36,7 +75,7 @@ class AbstractModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $this->assertEquals(AbstractModel::DEFAULT_ID_FIELD_NAME, $subject->getIdFieldName());
+        $this->assertEquals(AbstractModel::DEFAULT_ID_FIELD_NAME, $subject->this()->_getIdFieldName());
     }
 
     /**
@@ -48,9 +87,9 @@ class AbstractModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $this->reflect($subject)->idFieldName = 'test';
+        $subject->this()->idFieldName = 'test';
 
-        $this->assertEquals('test', $subject->getIdFieldName());
+        $this->assertEquals('test', $subject->this()->_getIdFieldName());
     }
 
     /**
@@ -62,11 +101,11 @@ class AbstractModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $this->reflect($subject)->data = array(
+        $subject->this()->data = array(
             'id' => 'test123',
         );
 
-        $this->assertEquals('test123', $subject->getId());
+        $this->assertEquals('test123', $subject->this()->_getId());
     }
 
     /**
@@ -85,7 +124,7 @@ class AbstractModelTest extends TestCase
             'id'       => 54321,
         );
 
-        $this->assertEquals('test123', $subject->getId());
+        $this->assertEquals('test123', $subject->this()->_getId());
     }
 
     /**
@@ -129,7 +168,7 @@ class AbstractModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $this->assertEquals(null, $subject->getResourceModel());
+        $this->assertEquals(null, $subject->this()->_getResourceModel());
     }
 
     /**
@@ -141,10 +180,10 @@ class AbstractModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $rm                                     = $this->getMockForAbstractClass('RebelCode\\Bookings\\Storage\\ResourceModelInterface');
-        $this->reflect($subject)->resourceModel = $rm;
+        $rm = $this->getMockForAbstractClass(static::RESOURCE_MODEL_CLASSNAME);
+        $subject->this()->resourceModel = $rm;
 
-        $this->assertEquals($rm, $subject->getResourceModel());
+        $this->assertEquals($rm, $subject->this()->_getResourceModel());
     }
 
     /**
@@ -156,9 +195,9 @@ class AbstractModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $rm = $this->getMockForAbstractClass('RebelCode\\Bookings\\Storage\\ResourceModelInterface');
-        $this->reflect($subject)->_setResourceModel($rm);
+        $rm = $this->getMockForAbstractClass(static::RESOURCE_MODEL_CLASSNAME);
+        $subject->this()->_setResourceModel($rm);
 
-        $this->assertEquals($rm, $this->reflect($subject)->resourceModel);
+        $this->assertEquals($rm, $subject->this()->resourceModel);
     }
 }

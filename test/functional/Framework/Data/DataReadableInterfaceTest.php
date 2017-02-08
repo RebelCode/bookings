@@ -1,25 +1,30 @@
 <?php
 
-namespace RebelCode\Bookings\Data\Test;
+namespace RebelCode\Bookings\FuncTest\Framework\Data;
+
+use \RebelCode\Bookings\Framework\Data\DataReadableInterface;
+use \Xpmock\TestCase;
 
 /**
- * Tests {@see \RebelCode\Bookings\Data\DataReadableInterface}.
+ * Tests {@see \RebelCode\Bookings\Framework\Data\DataReadableInterface}.
  *
  * @since [*next-version*]
  */
-class DataReadableInterfaceTest extends \Xpmock\TestCase
+class DataReadableInterfaceTest extends TestCase
 {
     /**
      * The name of the test subject.
+     *
+     * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Data\\DataReadableInterface';
+    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Framework\\Data\\DataReadableInterface';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return \RebelCode\Bookings\Data\DataReadableInterface
+     * @return DataReadableInterface
      */
     public function createInstance()
     {
@@ -34,14 +39,15 @@ class DataReadableInterfaceTest extends \Xpmock\TestCase
     /**
      * Tests whether a valid instance of the test subject can be created.
      *
-     * @covers \RebelCode\Bookings\Data\DataReadableInterface
-     *
      * @since [*next-version*]
      */
     public function testCanBeCreated()
     {
         $subject = $this->createInstance();
 
-        $this->assertInstanceOf(static::TEST_SUBJECT_CLASSNAME, $subject);
+        $this->assertInstanceOf(
+            static::TEST_SUBJECT_CLASSNAME, $subject,
+            'Subject is not a valid instance.'
+        );
     }
 }
