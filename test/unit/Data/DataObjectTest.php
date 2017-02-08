@@ -1,12 +1,12 @@
 <?php
 
-namespace RebelCode\Bookings\Test\Data;
+namespace RebelCode\Bookings\Test\Framework\Data;
 
-use RebelCode\Bookings\Data\DataObject;
-use Xpmock\TestCase;
+use \RebelCode\Bookings\Framework\Data\DataObject;
+use \Xpmock\TestCase;
 
 /**
- * Tests {@see RebelCode\Bookings\Data\DataObject}.
+ * Tests {@see RebelCode\Bookings\Framework\Data\DataObject}.
  *
  * @since [*next-version*]
  */
@@ -189,7 +189,7 @@ class DataObjectTest extends TestCase
 
         $subject->unsData();
 
-        $this->assertEquals(0, count($this->reflect($subject)->data));
+        $this->assertEmpty($this->reflect($subject)->data);
     }
 
     /**
