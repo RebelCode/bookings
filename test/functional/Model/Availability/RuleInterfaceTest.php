@@ -29,7 +29,8 @@ class RuleInterfaceTest extends TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->canBook()
+            ->getTerms()
+            ->evaluate()
             ->new();
 
         return $mock;
@@ -50,12 +51,7 @@ class RuleInterfaceTest extends TestCase
         );
 
         $this->assertInstanceOf(
-            'RebelCode\\Bookings\\Validation\\BookingValidatorInterface', $subject,
-            'Subject is not a valid BookingValidatorInterface instance.'
-        );
-
-        $this->assertInstanceOf(
-            'RebelCode\\Bookings\\Validation\\ExpressionInterface', $subject,
+            'Dhii\\Expression\\ExpressionInterface', $subject,
             'Subject is not a valid ExpressionInterface instance.'
         );
     }
