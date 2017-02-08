@@ -1,16 +1,46 @@
 <?php
 
-namespace RebelCode\Bookings\Model;
+namespace RebelCode\Bookings\Framework\Model;
 
-use RebelCode\Bookings\Storage\ResourceModelInterface;
+use \RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
 
 /**
  * Concrete implementation of a model - useful for generic model types.
  *
  * @since [*next-version*]
  */
-class GenericModel extends AbstractModel
+class GenericModel extends AbstractModel implements ModelInterface
 {
+    /**
+     * {@inheritdoc}
+     *
+     * @since [*next-version*]
+     */
+    public function getIdFieldName()
+    {
+        return $this->_getIdFieldName();
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @since [*next-version*]
+     */
+    public function getId()
+    {
+        return $this->_getId();
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @since [*next-version*]
+     */
+    public function getResourceModel()
+    {
+        return $this->_getResourceModel();
+    }
+
     /**
      * Sets the model ID.
      *

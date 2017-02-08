@@ -1,16 +1,16 @@
 <?php
 
-namespace RebelCode\Bookings\Model;
+namespace RebelCode\Bookings\Framework\Model;
 
-use RebelCode\Bookings\Data\DataObject;
-use RebelCode\Bookings\Storage\ResourceModelInterface;
+use \RebelCode\Bookings\Framework\Data\MagicDataObject;
+use \RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
 
 /**
  * Abstract implementation of a model.
  *
  * @since [*next-version*]
  */
-abstract class AbstractModel extends DataObject implements ModelInterface
+abstract class AbstractModel extends MagicDataObject
 {
     /**
      * The default ID field name.
@@ -38,11 +38,13 @@ abstract class AbstractModel extends DataObject implements ModelInterface
     protected $resourceModel;
 
     /**
-     * {@inheritdoc}
+     * Gets the ID field name.
      *
      * @since [*next-version*]
+     *
+     * @return string The ID field name.
      */
-    public function getIdFieldName()
+    protected function _getIdFieldName()
     {
         return is_null($this->idFieldName)
             ? static::DEFAULT_ID_FIELD_NAME
@@ -66,13 +68,15 @@ abstract class AbstractModel extends DataObject implements ModelInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Gets the ID.
      *
      * @since [*next-version*]
+     *
+     * @return int The ID.
      */
-    public function getId()
+    protected function _getId()
     {
-        return $this->getData($this->getIdFieldName());
+        return $this->getData($this->_getIdFieldName());
     }
 
     /**
@@ -86,23 +90,25 @@ abstract class AbstractModel extends DataObject implements ModelInterface
      */
     protected function _setId($id)
     {
-        $this->setData($this->getIdFieldName(), $id);
+        $this->setData($this->_getIdFieldName(), $id);
 
         return $this;
     }
 
     /**
-     * {@inheritdoc}
+     * Gets the resource model.
      *
      * @since [*next-version*]
+     *
+     * @return ResourceModelInterface The resource model instance.
      */
-    public function getResourceModel()
+    protected function _getResourceModel()
     {
         return $this->resourceModel;
     }
 
     /**
-     * Sets the resource model instance.
+     * Sets the resource model.
      *
      * @since [*next-version*]
      *
