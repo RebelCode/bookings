@@ -12,6 +12,20 @@ use \RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
 class GenericModel extends AbstractModel implements ModelInterface
 {
     /**
+     * Constructor.
+     *
+     * @since [*next-version*]
+     *
+     * @param array $data Optional array of data. Default: array
+     * @param ResourceModelInterface $resourceModel The resource model instance. Default: null
+     */
+    public function __construct(array $data = array(), ResourceModelInterface $resourceModel = null)
+    {
+        parent::__construct($data);
+        $this->setResourceModel($resourceModel);
+    }
+
+    /**
      * {@inheritdoc}
      *
      * @since [*next-version*]
