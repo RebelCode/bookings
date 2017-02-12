@@ -112,11 +112,11 @@ abstract class AbstractModel extends MagicDataObject
      *
      * @since [*next-version*]
      *
-     * @param ResourceModelInterface $resourceModel The resource model instance.
+     * @param ResourceModelInterface $resourceModel The resource model instance. Default: null
      *
      * @return $this This instance.
      */
-    protected function _setResourceModel(ResourceModelInterface $resourceModel)
+    protected function _setResourceModel(ResourceModelInterface $resourceModel = null)
     {
         $this->resourceModel = $resourceModel;
 

@@ -90,11 +90,11 @@ class GenericModel extends AbstractModel implements ModelInterface
     /**
      * Sets the resource model.
      *
-     * @param ResourceModelInterface $resourceModel The resource model instance.
+     * @param ResourceModelInterface $resourceModel The resource model instance. Default: null
      *
      * @return $this This instance.
      */
-    public function setResourceModel(ResourceModelInterface $resourceModel)
+    public function setResourceModel(ResourceModelInterface $resourceModel = null)
     {
         $this->_setResourceModel($resourceModel);
 
