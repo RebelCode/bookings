@@ -20,7 +20,7 @@ class SimpleSessionService extends GenericModel implements SessionServiceInterfa
      *
      * @since [*next-version*]
      */
-    public function getMinSessions(PeriodInterface $period, array $args = array())
+    public function getMinSessions(PeriodInterface $period = null, array $args = array())
     {
         return $this->getData('min_sessions', 1);
     }
@@ -30,7 +30,7 @@ class SimpleSessionService extends GenericModel implements SessionServiceInterfa
      *
      * @since [*next-version*]
      */
-    public function getMaxSessions(PeriodInterface $period, array $args = array())
+    public function getMaxSessions(PeriodInterface $period = null, array $args = array())
     {
         return $this->getData('max_sessions', 1);
     }
@@ -40,7 +40,7 @@ class SimpleSessionService extends GenericModel implements SessionServiceInterfa
      *
      * @since [*next-version*]
      */
-    public function getPrice(PeriodInterface $period, array $args = array())
+    public function getPrice(PeriodInterface $period = null, array $args = array())
     {
         $duration     = $period->getDuration();
         $numSessions  = $duration / $this->getSessionLength($period, $args);
@@ -56,7 +56,7 @@ class SimpleSessionService extends GenericModel implements SessionServiceInterfa
      *
      * @since [*next-version*]
      */
-    public function getSessionLength(PeriodInterface $period, array $args = array())
+    public function getSessionLength(PeriodInterface $period = null, array $args = array())
     {
         return $this->getData('session_length', 3600);
     }
@@ -76,7 +76,7 @@ class SimpleSessionService extends GenericModel implements SessionServiceInterfa
      *
      * @since [*next-version*]
      */
-    public function getSessionPrice(PeriodInterface $period, array $args = array())
+    public function getSessionPrice(PeriodInterface $period = null, array $args = array())
     {
         return $this->getData('session_price');
     }
