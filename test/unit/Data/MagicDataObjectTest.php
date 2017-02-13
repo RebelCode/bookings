@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Test\Framework\Data;
 
-use \Xpmock\TestCase;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Framework\Data\MagicDataObject}.
@@ -58,7 +58,7 @@ class MagicDataObjectTest extends TestCase
 
         $snakeCase = $subject->this()->_snakeCase('camelCaseName');
         $expected  = array(
-            'camelCaseName' => 'camel_case_name'
+            'camelCaseName' => 'camel_case_name',
         );
 
         $this->assertEquals($expected, $subject->this()->_underscoreCache);
@@ -74,7 +74,7 @@ class MagicDataObjectTest extends TestCase
         $subject = $this->createInstance();
 
         $subject->this()->_underscoreCache = array(
-            'camelCaseName' => 'cache_test_entry'
+            'camelCaseName' => 'cache_test_entry',
         );
 
         $snakeCase = $subject->this()->_snakeCase('camelCaseName');
@@ -93,7 +93,7 @@ class MagicDataObjectTest extends TestCase
 
         $subject->this()->data = array(
             'test_one' => 1,
-            'test_two' => 2
+            'test_two' => 2,
         );
 
         $this->assertEquals(1, $subject->getTestOne());
@@ -111,7 +111,7 @@ class MagicDataObjectTest extends TestCase
 
         $subject->this()->data = array(
             'test_one' => 1,
-            'test_two' => 2
+            'test_two' => 2,
         );
 
         $this->assertEquals(2, $subject->getTestTwo('default'));
@@ -128,7 +128,7 @@ class MagicDataObjectTest extends TestCase
 
         $subject->this()->data = array(
             'test_one' => 1,
-            'test_two' => 2
+            'test_two' => 2,
         );
 
         $this->assertEquals(null, $subject->getTestThree());
@@ -146,7 +146,7 @@ class MagicDataObjectTest extends TestCase
 
         $subject->this()->data = array(
             'test_one' => 1,
-            'test_two' => 2
+            'test_two' => 2,
         );
 
         $this->assertEquals('default', $subject->getTestThree('default'));
@@ -180,12 +180,12 @@ class MagicDataObjectTest extends TestCase
         $subject->this()->data = array(
             'test_one'  => 1,
             'test_two'  => 2,
-            'some_data' => 'blabla'
+            'some_data' => 'blabla',
         );
         $expected = array(
             'test_one'  => 1,
             'test_two'  => 2,
-            'some_data' => 'foobar'
+            'some_data' => 'foobar',
         );
 
         $subject->setSomeData('foobar');
@@ -221,7 +221,7 @@ class MagicDataObjectTest extends TestCase
         $subject->this()->data = array(
             'test_one'  => 1,
             'test_two'  => 2,
-            'some_data' => 'blabla'
+            'some_data' => 'blabla',
         );
 
         $this->assertTrue($subject->hasTestTwo());
@@ -239,7 +239,7 @@ class MagicDataObjectTest extends TestCase
         $subject->this()->data = array(
             'test_one'  => 1,
             'test_two'  => 2,
-            'some_data' => 'blabla'
+            'some_data' => 'blabla',
         );
 
         $this->assertFalse($subject->hasThatWhichDoesNotExist());
@@ -257,11 +257,11 @@ class MagicDataObjectTest extends TestCase
         $subject->this()->data = array(
             'test_one'  => 1,
             'test_two'  => 2,
-            'some_data' => 'blabla'
+            'some_data' => 'blabla',
         );
         $expected = array(
-            'test_one'  => 1,
-            'test_two'  => 2
+            'test_one' => 1,
+            'test_two' => 2,
         );
 
         $subject->unsSomeData();
@@ -281,12 +281,12 @@ class MagicDataObjectTest extends TestCase
         $subject->this()->data = array(
             'test_one'  => 1,
             'test_two'  => 2,
-            'some_data' => 'foobar'
+            'some_data' => 'foobar',
         );
         $expected = array(
             'test_one'  => 1,
             'test_two'  => 2,
-            'some_data' => 'foobar'
+            'some_data' => 'foobar',
         );
 
         $subject->unsDataThatDoesNotExist();

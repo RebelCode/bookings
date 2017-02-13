@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Validation;
 
-use \RebelCode\Bookings\Validation\BookingValidatorInterface;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Validation\BookingValidatorInterface;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Validation\BookingValidatorInterface}.

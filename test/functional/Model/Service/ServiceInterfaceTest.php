@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Model\Service;
 
-use \RebelCode\Bookings\Model\Service\ServiceInterface;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Model\Service\ServiceInterface;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Model\Service\ServiceInterface}.
@@ -12,7 +12,6 @@ use \Xpmock\TestCase;
  */
 class ServiceInterfaceTest extends TestCase
 {
-
     /**
      * The name of the test subject.
      *

@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Framework\Storage;
 
-use \RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see \RebelCode\Bookings\Framework\ResourceModelInterface}.

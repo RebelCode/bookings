@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Framework\Data;
 
-use \RebelCode\Bookings\Data\MagicDataObject;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Data\MagicDataObject;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Framework\Data\MagicDataObject}.

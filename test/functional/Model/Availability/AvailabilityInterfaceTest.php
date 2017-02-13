@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Model\Availability;
 
-use \RebelCode\Bookings\Model\Availability\AvailabilityInterface;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Model\Availability\AvailabilityInterface;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Model\Availability\AvailabilityInterface}.

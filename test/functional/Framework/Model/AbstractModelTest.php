@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Framework\Model;
 
-use \RebelCode\Bookings\Framework\Model\AbstractModel;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Framework\Model\AbstractModel;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Framework\Model\AbstractModel}.
@@ -180,7 +180,7 @@ class AbstractModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $rm = $this->getMockForAbstractClass(static::RESOURCE_MODEL_CLASSNAME);
+        $rm                             = $this->getMockForAbstractClass(static::RESOURCE_MODEL_CLASSNAME);
         $subject->this()->resourceModel = $rm;
 
         $this->assertEquals($rm, $subject->this()->_getResourceModel());

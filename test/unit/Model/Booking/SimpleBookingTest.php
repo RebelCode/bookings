@@ -2,11 +2,11 @@
 
 namespace RebelCode\Bookings\Test\Model\Booking;
 
-use \RebelCode\Bookings\Enum\BookingStatus;
-use \RebelCode\Bookings\Model\Booking\SimpleBooking;
-use \RebelCode\Diary\DateTime\DateTime;
-use \RebelCode\Diary\DateTime\Period;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Enum\BookingStatus;
+use RebelCode\Bookings\Model\Booking\SimpleBooking;
+use RebelCode\Diary\DateTime\DateTime;
+use RebelCode\Diary\DateTime\Period;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Model\SimpleBooking}.

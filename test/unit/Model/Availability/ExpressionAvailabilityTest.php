@@ -2,15 +2,15 @@
 
 namespace RebelCode\Bookings\Test\Model\Availability;
 
-use \Dhii\Espresso\Expression\OrExpression;
-use \Dhii\Espresso\Term\LiteralTerm;
-use \Dhii\Expression\ExpressionInterface;
-use \RebelCode\Bookings\Expression\BookingContext;
-use \RebelCode\Bookings\Model\Availability\ExpressionAvailability;
-use \RebelCode\Bookings\Model\Booking\SimpleBooking;
-use \RebelCode\Diary\DateTime\DateTime;
-use \RebelCode\Diary\DateTime\Period;
-use \Xpmock\TestCase;
+use Dhii\Espresso\Expression\OrExpression;
+use Dhii\Espresso\Term\LiteralTerm;
+use Dhii\Expression\ExpressionInterface;
+use RebelCode\Bookings\Expression\BookingContext;
+use RebelCode\Bookings\Model\Availability\ExpressionAvailability;
+use RebelCode\Bookings\Model\Booking\SimpleBooking;
+use RebelCode\Diary\DateTime\DateTime;
+use RebelCode\Diary\DateTime\Period;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Model\Availability\ExpressionAvailability}.
@@ -37,6 +37,7 @@ class ExpressionAvailabilityTest extends TestCase
      * @since [*next-version*]
      *
      * @param callable $evaluation The callback.
+     *
      * @return ExpressionInterface The expression mock instance.
      */
     public function mockExpression($evaluation)
@@ -58,16 +59,16 @@ class ExpressionAvailabilityTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $period     = new Period(
+        $period = new Period(
             DateTime::parse('Today 10:00'),
             DateTime::parse('Today 11:00')
         );
-        $booking    = new SimpleBooking(array(
+        $booking = new SimpleBooking(array(
             'id'     => 0,
-            'period' => $period
+            'period' => $period,
         ));
         $expression = new OrExpression(array(
-            new LiteralTerm(true)
+            new LiteralTerm(true),
         ));
 
         $subject->setExpression($expression);
@@ -85,16 +86,16 @@ class ExpressionAvailabilityTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $period     = new Period(
+        $period = new Period(
             DateTime::parse('Today 10:00'),
             DateTime::parse('Today 11:00')
         );
-        $booking    = new SimpleBooking(array(
+        $booking = new SimpleBooking(array(
             'id'     => 0,
-            'period' => $period
+            'period' => $period,
         ));
         $expression = new OrExpression(array(
-            new LiteralTerm(false)
+            new LiteralTerm(false),
         ));
 
         $subject->setExpression($expression);
@@ -112,13 +113,13 @@ class ExpressionAvailabilityTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $period     = new Period(
+        $period = new Period(
             DateTime::parse('Today 10:00'),
             DateTime::parse('Today 11:00')
         );
-        $booking    = new SimpleBooking(array(
+        $booking = new SimpleBooking(array(
             'id'     => 0,
-            'period' => $period
+            'period' => $period,
         ));
 
         $evaluation = function ($context) {
@@ -146,13 +147,13 @@ class ExpressionAvailabilityTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $period     = new Period(
+        $period = new Period(
             DateTime::parse('Today 10:00'),
             DateTime::parse('Today 11:00')
         );
-        $booking    = new SimpleBooking(array(
+        $booking = new SimpleBooking(array(
             'id'     => 21,
-            'period' => $period
+            'period' => $period,
         ));
 
         $evaluation = function ($context) {

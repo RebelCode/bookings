@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Model\Service;
 
-use \RebelCode\Bookings\Model\Service\SessionServiceInterface;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Model\Service\SessionServiceInterface;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Model\Service\SessionServiceInterface}.

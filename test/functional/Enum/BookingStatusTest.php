@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Enum;
 
-use \RebelCode\Bookings\Enum\BookingStatus;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Enum\BookingStatus;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Enum\BookingStatus}.

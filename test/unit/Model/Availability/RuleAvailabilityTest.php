@@ -2,10 +2,10 @@
 
 namespace RebelCode\Bookings\Test\Model\Availability;
 
-use \Dhii\Espresso\Expression\OrExpression;
-use \RebelCode\Bookings\Model\Availability\RuleAvailability;
-use \RebelCode\Bookings\Model\Availability\RuleInterface;
-use \Xpmock\TestCase;
+use Dhii\Espresso\Expression\OrExpression;
+use RebelCode\Bookings\Model\Availability\RuleAvailability;
+use RebelCode\Bookings\Model\Availability\RuleInterface;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Model\Availability\RuleAvailability}.
@@ -32,6 +32,7 @@ class RuleAvailabilityTest extends TestCase
      * @since [*next-version*]
      *
      * @param callable $evaluation The callback.
+     *
      * @return RuleInterface The expression mock instance.
      */
     public function mockRule($evaluation)
@@ -58,12 +59,12 @@ class RuleAvailabilityTest extends TestCase
 
         $subject->setRules(array(
             $this->mockRule(function () { return true; }),
-            $this->mockRule(function () { return true; })
+            $this->mockRule(function () { return true; }),
         ));
 
         $expected = new OrExpression(array(
             $this->mockRule(function () { return true; }),
-            $this->mockRule(function () { return true; })
+            $this->mockRule(function () { return true; }),
         ));
 
         $this->assertEquals($expected, $subject->getExpression());

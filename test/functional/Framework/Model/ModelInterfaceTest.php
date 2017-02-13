@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Framework\Model;
 
-use \RebelCode\Bookings\Framework\Model\ModelInterface;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Framework\Model\ModelInterface;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see \RebelCode\Bookings\Framework\Model\ModelInterface}.

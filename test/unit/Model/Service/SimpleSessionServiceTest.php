@@ -2,10 +2,10 @@
 
 namespace RebelCode\Bookings\FuncTest\Model\Service;
 
-use \RebelCode\Bookings\Model\Service\SimpleSessionService;
-use \RebelCode\Diary\DateTime\DateTime;
-use \RebelCode\Diary\DateTime\Period;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Model\Service\SimpleSessionService;
+use RebelCode\Diary\DateTime\DateTime;
+use RebelCode\Diary\DateTime\Period;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Model\SimpleSessionService}.

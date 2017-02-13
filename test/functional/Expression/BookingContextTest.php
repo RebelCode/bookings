@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Expression;
 
-use \RebelCode\Bookings\Expression\BookingContext;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Expression\BookingContext;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Expression\BookingContext}.

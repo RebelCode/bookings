@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Framework\Data;
 
-use \RebelCode\Bookings\Framework\Data\DataWriteableInterface;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Framework\Data\DataWriteableInterface;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see \RebelCode\Bookings\Framework\Data\DataWriteableInterface}.

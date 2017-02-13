@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Framework\Model;
 
-use \RebelCode\Bookings\Framework\Model\GenericModel;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Framework\Model\GenericModel;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Framework\Model\GenericModel}.
@@ -115,9 +115,9 @@ class GenericModelTest extends TestCase
         $subject = $this->createInstance();
 
         $subject->this()->idFieldName = 'some_key';
-        $subject->this()->data = array(
+        $subject->this()->data        = array(
             'id'       => 54321,
-            'some_key' => 'test123'
+            'some_key' => 'test123',
         );
 
         $this->assertEquals('test123', $subject->getId());
@@ -173,7 +173,7 @@ class GenericModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $rm = $this->getMockForAbstractClass(static::RESOURCE_MODEL_CLASSNAME);
+        $rm                             = $this->getMockForAbstractClass(static::RESOURCE_MODEL_CLASSNAME);
         $subject->this()->resourceModel = $rm;
 
         $this->assertEquals($rm, $subject->getResourceModel());
