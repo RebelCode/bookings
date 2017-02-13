@@ -1,6 +1,6 @@
 <?php
 
-namespace RebelCode\Bookings\Model\Availability;
+namespace RebelCode\Bookings\Model\Availability\Rule;
 
 use \Dhii\Expression\LogicalExpressionInterface;
 
