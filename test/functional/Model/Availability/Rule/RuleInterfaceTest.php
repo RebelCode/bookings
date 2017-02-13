@@ -1,12 +1,12 @@
 <?php
 
-namespace RebelCode\Bookings\FuncTest\Model\Availability;
+namespace RebelCode\Bookings\FuncTest\Model\Availability\Rule;
 
-use \RebelCode\Bookings\Model\Availability\RuleInterface;
+use \RebelCode\Bookings\Model\AvailabilityRule\RuleInterface;
 use \Xpmock\TestCase;
 
 /**
- * Tests {@see RebelCode\Bookings\Model\Availability\RuleInterface}.
+ * Tests {@see RebelCode\Bookings\Model\AvailabilityRule\RuleInterface}.
  *
  * @since [*next-version*]
  */
@@ -17,7 +17,7 @@ class RuleInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Model\\Availability\\RuleInterface';
+    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Model\\Availability\\Rule\\RuleInterface';
 
     /**
      * Creates a new instance of the test subject.
@@ -31,6 +31,8 @@ class RuleInterfaceTest extends TestCase
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
             ->getTerms()
             ->evaluate()
+            ->isNegated()
+            ->getType()
             ->new();
 
         return $mock;
