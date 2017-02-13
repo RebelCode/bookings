@@ -11,4 +11,12 @@ use \Dhii\Expression\LogicalExpressionInterface;
  */
 interface RuleInterface extends LogicalExpressionInterface
 {
+    /**
+     * Gets the type for this rule.
+     *
+     * @since [*next-version*]
+     *
+     * @return RuleTypeInterface The rule type.
+     */
+    public function getType();
 }
