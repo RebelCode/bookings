@@ -3,9 +3,9 @@
 namespace RebelCode\Bookings\Model\Availability;
 
 use \Dhii\Espresso\Expression\AndExpression;
+use \Dhii\Espresso\Expression\OrExpression;
 use \RebelCode\Bookings\Model\Availability\ExpressionAvailability;
 use \RebelCode\Bookings\Model\Availability\RuleInterface;
-
 
 /**
  * An availability implementation that uses an expression that consists of rules
@@ -18,7 +18,7 @@ use \RebelCode\Bookings\Model\Availability\RuleInterface;
  * @method RuleInterface[] getRules() Gets the availability rules.
  * @method $this setRules(array $rules) Sets the availability rules.
  */
-class RuleExpressionAvailability extends ExpressionAvailability
+class RuleAvailability extends ExpressionAvailability
 {
     /**
      * Gets the expression.
@@ -29,6 +29,6 @@ class RuleExpressionAvailability extends ExpressionAvailability
      */
     public function getExpression()
     {
-        return new AndExpression($this->getRules());
+        return new OrExpression($this->getRules());
     }
 }

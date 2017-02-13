@@ -2,28 +2,28 @@
 
 namespace RebelCode\Bookings\Test\Model\Availability;
 
-use \Dhii\Espresso\Expression\AndExpression;
-use \RebelCode\Bookings\Model\Availability\RuleExpressionAvailability;
+use \Dhii\Espresso\Expression\OrExpression;
+use \RebelCode\Bookings\Model\Availability\RuleAvailability;
 use \RebelCode\Bookings\Model\Availability\RuleInterface;
 use \Xpmock\TestCase;
 
 /**
- * Tests {@see RebelCode\Bookings\Model\Availability\RuleExpressionAvailability}.
+ * Tests {@see RebelCode\Bookings\Model\Availability\RuleAvailability}.
  *
  * @since [*next-version*]
  */
-class RuleExpressionAvailabilityTest extends TestCase
+class RuleAvailabilityTest extends TestCase
 {
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return RuleExpressionAvailability The created instance.
+     * @return RuleAvailability The created instance.
      */
     public function createInstance()
     {
-        return new RuleExpressionAvailability();
+        return new RuleAvailability();
     }
 
     /**
@@ -36,11 +36,13 @@ class RuleExpressionAvailabilityTest extends TestCase
      */
     public function mockRule($evaluation)
     {
-        return $this->mock('RebelCode\\Bookings\\Model\\Availability\\RuleInterface')
+        return $this->mock('RebelCode\\Bookings\\Model\\Availability\\Rule\\RuleInterface')
             ->evaluate(function ($context) use ($evaluation) {
                 return $evaluation($context);
             })
             ->getTerms()
+            ->isNegated(false)
+            ->getType()
             ->new();
     }
 
@@ -59,7 +61,7 @@ class RuleExpressionAvailabilityTest extends TestCase
             $this->mockRule(function () { return true; })
         ));
 
-        $expected = new AndExpression(array(
+        $expected = new OrExpression(array(
             $this->mockRule(function () { return true; }),
             $this->mockRule(function () { return true; })
         ));
