@@ -1,6 +1,6 @@
 <?php
 
-namespace RebelCode\Bookings\Model\Availability;
+namespace RebelCode\Bookings\Model\Availability\Rule;
 
 /**
  * Anything that represents a simple rule that uses a range to define restrictions.

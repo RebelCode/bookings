@@ -1,6 +1,6 @@
 <?php
 
-namespace RebelCode\Bookings\Model\Availability;
+namespace RebelCode\Bookings\Model\Availability\Rule;
 
 /**
  * Something that can act as a registry of rule types.
