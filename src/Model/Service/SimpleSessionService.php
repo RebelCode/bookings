@@ -3,6 +3,7 @@
 namespace RebelCode\Bookings\Model\Service;
 
 use \RebelCode\Bookings\Framework\Model\GenericModel;
+use \RebelCode\Bookings\Model\Availability\AvailabilityInterface;
 use \RebelCode\Diary\DateTime\PeriodInterface;
 
 /**
@@ -65,6 +66,8 @@ class SimpleSessionService extends GenericModel implements SessionServiceInterfa
      * {@inheritdoc}
      *
      * @since [*next-version*]
+     *
+     * @return AvailabilityInterface
      */
     public function getAvailability()
     {
