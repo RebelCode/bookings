@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\Framework\Storage;
 
-use \Dhii\Storage\AdapterInterface;
-use \RebelCode\Bookings\Framework\Model\GenericModel;
+use Dhii\Storage\AdapterInterface;
+use RebelCode\Bookings\Framework\Model\GenericModel;
 
 /**
  * Basic functionality of a resource model.

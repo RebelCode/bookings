@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Framework\Model;
 
-use \RebelCode\Bookings\Framework;
+use RebelCode\Bookings\Framework;
 
 /**
  * Any object that can be considered a "model".

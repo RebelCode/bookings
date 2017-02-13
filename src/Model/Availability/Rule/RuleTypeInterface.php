@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\Model\Availability\Rule;
 
-use \ArrayAccess;
-use \Traversable;
+use ArrayAccess;
+use Traversable;
 
 /**
  * Something that defines a specific availability rule type.

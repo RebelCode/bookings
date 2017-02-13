@@ -2,10 +2,10 @@
 
 namespace RebelCode\Bookings\Model\Availability;
 
-use \Dhii\Espresso\Expression\AndExpression;
-use \Dhii\Espresso\Expression\OrExpression;
-use \RebelCode\Bookings\Model\Availability\ExpressionAvailability;
-use \RebelCode\Bookings\Model\Availability\RuleInterface;
+use Dhii\Espresso\Expression\AndExpression;
+use Dhii\Espresso\Expression\OrExpression;
+use RebelCode\Bookings\Model\Availability\ExpressionAvailability;
+use RebelCode\Bookings\Model\Availability\RuleInterface;
 
 /**
  * An availability implementation that uses an expression that consists of rules

@@ -2,9 +2,9 @@
 
 namespace RebelCode\Bookings\Model\Availability\Rule;
 
-use \RebelCode\Bookings\Framework\Model\GenericModel;
-use \RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
-use \Traversable;
+use RebelCode\Bookings\Framework\Model\GenericModel;
+use RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
+use Traversable;
 
 /**
  * Basic implementation of a rule type registry model.

@@ -2,10 +2,10 @@
 
 namespace RebelCode\Bookings\Model\Booking;
 
-use \Finite\StatefulInterface;
-use \RebelCode\Bookings\Enum\BookingStatus;
-use \RebelCode\Bookings\Framework\Model\GenericModel;
-use \RebelCode\Diary\BookingInterface;
+use Finite\StatefulInterface;
+use RebelCode\Bookings\Enum\BookingStatus;
+use RebelCode\Bookings\Framework\Model\GenericModel;
+use RebelCode\Diary\BookingInterface;
 
 /**
  * A simple implementation of a booking model.
@@ -15,6 +15,7 @@ use \RebelCode\Diary\BookingInterface;
  * @method int getPaymentId() Gets the IDs of the associated payments.
  * @method BookingStatus getStatus() Gets the booking's current status.
  * @method int getCustomerTzOffset() Gets the customer timezone offset at the time this booking was made.
+ *
  * @since [*next-version*]
  */
 class SimpleBooking extends GenericModel implements

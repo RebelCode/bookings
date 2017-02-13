@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Enum;
 
-use \MyCLabs\Enum\Enum;
+use MyCLabs\Enum\Enum;
 
 /**
  * Booking status enumeration.

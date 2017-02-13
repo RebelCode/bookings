@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Validation;
 
-use \RebelCode\Diary\BookingInterface;
+use RebelCode\Diary\BookingInterface;
 
 /**
  * Something that can check if a booking can be booked.

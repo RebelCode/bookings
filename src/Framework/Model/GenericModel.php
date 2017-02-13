@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Framework\Model;
 
-use \RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
+use RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
 
 /**
  * Concrete implementation of a model - useful for generic model types.
@@ -16,7 +16,7 @@ class GenericModel extends AbstractModel implements ModelInterface
      *
      * @since [*next-version*]
      *
-     * @param array $data Optional array of data. Default: array
+     * @param array                  $data          Optional array of data. Default: array
      * @param ResourceModelInterface $resourceModel The resource model instance. Default: null
      */
     public function __construct(array $data = array(), ResourceModelInterface $resourceModel = null)

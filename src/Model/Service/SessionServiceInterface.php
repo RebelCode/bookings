@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Model\Service;
 
-use \RebelCode\Diary\DateTime\PeriodInterface;
+use RebelCode\Diary\DateTime\PeriodInterface;
 
 /**
  * A service that can be booked in terms of sessions.

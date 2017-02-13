@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Model\Availability;
 
-use \RebelCode\Bookings\Framework\Model\GenericModel;
+use RebelCode\Bookings\Framework\Model\GenericModel;
 
 /**
  * Basic functionality for an availability.

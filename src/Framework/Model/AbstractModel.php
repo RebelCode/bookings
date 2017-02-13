@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\Framework\Model;
 
-use \RebelCode\Bookings\Framework\Data\MagicDataObject;
-use \RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
+use RebelCode\Bookings\Framework\Data\MagicDataObject;
+use RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
 
 /**
  * Abstract implementation of a model.

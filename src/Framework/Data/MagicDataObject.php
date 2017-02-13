@@ -13,7 +13,6 @@ class MagicDataObject extends DataObject
      * Cache for the `_underscore()` method.
      *
      * @since [*next-version*]
-     *
      * @see _underscore()
      *
      * @var array
@@ -26,7 +25,7 @@ class MagicDataObject extends DataObject
      * @since [*next-version*]
      *
      * @param string $method The name of the method called.
-     * @param array $args    An array of arguments passed to the called method.
+     * @param array  $args   An array of arguments passed to the called method.
      *
      * @return mixed The result.
      */
@@ -42,14 +41,17 @@ class MagicDataObject extends DataObject
         switch ($prefix) {
             case 'get' :
                 $data = $this->getData($key, $arg);
+
                 return $data;
 
             case 'set' :
                 $result = $this->setData($key, $arg);
+
                 return $result;
 
             case 'uns' :
                 $result = $this->unsData($key);
+
                 return $result;
 
             case 'has' :
@@ -78,11 +80,10 @@ class MagicDataObject extends DataObject
             return $this->_underscoreCache[$camelName];
         }
 
-        $result = strtolower(preg_replace('/(.)([A-Z])/', "$1_$2", $camelName));
+        $result = strtolower(preg_replace('/(.)([A-Z])/', '$1_$2', $camelName));
 
         $this->_underscoreCache[$camelName] = $result;
 
         return $result;
     }
-
 }

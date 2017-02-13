@@ -2,9 +2,9 @@
 
 namespace RebelCode\Bookings\Model\Availability;
 
-use \Dhii\Expression\ExpressionInterface;
-use \RebelCode\Bookings\Expression\BookingContext;
-use \RebelCode\Diary\BookingInterface;
+use Dhii\Expression\ExpressionInterface;
+use RebelCode\Bookings\Expression\BookingContext;
+use RebelCode\Diary\BookingInterface;
 
 /**
  * An availability that uses an expression to assert whether a booking can be booked or not.

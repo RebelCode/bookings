@@ -2,9 +2,9 @@
 
 namespace RebelCode\Bookings\Model\Service;
 
-use \RebelCode\Bookings\Framework\Model\ModelInterface;
-use \RebelCode\Bookings\Model\Availability\AvailabilityInterface;
-use \RebelCode\Diary\DateTime\PeriodInterface;
+use RebelCode\Bookings\Framework\Model\ModelInterface;
+use RebelCode\Bookings\Model\Availability\AvailabilityInterface;
+use RebelCode\Diary\DateTime\PeriodInterface;
 
 /**
  * Something that represents a bookable service.

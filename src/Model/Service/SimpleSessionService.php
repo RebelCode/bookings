@@ -2,9 +2,9 @@
 
 namespace RebelCode\Bookings\Model\Service;
 
-use \RebelCode\Bookings\Framework\Model\GenericModel;
-use \RebelCode\Bookings\Model\Availability\AvailabilityInterface;
-use \RebelCode\Diary\DateTime\PeriodInterface;
+use RebelCode\Bookings\Framework\Model\GenericModel;
+use RebelCode\Bookings\Model\Availability\AvailabilityInterface;
+use RebelCode\Diary\DateTime\PeriodInterface;
 
 /**
  * A simple implementation of a service that does not have period-specific configuration.
