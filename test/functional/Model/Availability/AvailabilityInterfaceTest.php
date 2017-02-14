@@ -30,6 +30,13 @@ class AvailabilityInterfaceTest extends TestCase
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
             ->canBook()
+            ->getId()
+            ->getIdFieldName()
+            ->hasData()
+            ->getData()
+            ->setData()
+            ->unsData()
+            ->getResourceModel()
             ->new();
 
         return $mock;
