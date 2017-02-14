@@ -2,11 +2,11 @@
 
 namespace RebelCode\Bookings\Test\Model\Availability;
 
-use \Dhii\Espresso\Expression\AndExpression;
-use \Dhii\Espresso\Expression\OrExpression;
-use \RebelCode\Bookings\Model\Availability\Rule\RuleInterface;
-use \RebelCode\Bookings\Model\Availability\TraditionalRuleAvailability;
-use \Xpmock\TestCase;
+use Dhii\Espresso\Expression\AndExpression;
+use Dhii\Espresso\Expression\OrExpression;
+use RebelCode\Bookings\Model\Availability\Rule\RuleInterface;
+use RebelCode\Bookings\Model\Availability\TraditionalRuleAvailability;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Model\Availability\TraditionalRuleAvailability}.
@@ -65,7 +65,7 @@ class TraditionalRuleAvailabilityTest extends TestCase
             $this->mockRule(true),
             $this->mockRule(true),
             $this->mockRule(false),
-            $this->mockRule(true)
+            $this->mockRule(true),
         ));
 
         $expected = new AndExpression(array(
@@ -73,14 +73,14 @@ class TraditionalRuleAvailabilityTest extends TestCase
                 new AndExpression(array(
                     new OrExpression(array(
                         $this->mockRule(false),
-                        $this->mockRule(false)
+                        $this->mockRule(false),
                     )),
                     $this->mockRule(true),
-                    $this->mockRule(true)
+                    $this->mockRule(true),
                 )),
-                $this->mockRule(false)
+                $this->mockRule(false),
             )),
-            $this->mockRule(true)
+            $this->mockRule(true),
         ));
 
         $this->assertEquals($expected, $subject->getExpression());

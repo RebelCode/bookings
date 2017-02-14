@@ -2,11 +2,11 @@
 
 namespace RebelCode\Bookings\Model\Availability;
 
-use \Dhii\Espresso\AbstractGenericLogicalExpression;
-use \Dhii\Espresso\Expression\AndExpression;
-use \Dhii\Espresso\Expression\OrExpression;
-use \Dhii\Expression\ExpressionInterface;
-use \RebelCode\Bookings\Model\Availability\Rule\RuleInterface;
+use Dhii\Espresso\AbstractGenericLogicalExpression;
+use Dhii\Espresso\Expression\AndExpression;
+use Dhii\Espresso\Expression\OrExpression;
+use Dhii\Expression\ExpressionInterface;
+use RebelCode\Bookings\Model\Availability\Rule\RuleInterface;
 
 /**
  * A rule availability implementation that works in the same way that EDD Bookings
@@ -25,7 +25,7 @@ class TraditionalRuleAvailability extends AbstractRuleAvailability
      */
     public function getExpression()
     {
-        $expression  = new OrExpression();
+        $expression = new OrExpression();
 
         foreach ($this->getRules() as $_rule) {
             $expression = ($_rule->isNegated())
@@ -50,7 +50,7 @@ class TraditionalRuleAvailability extends AbstractRuleAvailability
      * 2. The rule given as 2nd argument.
      *
      * @param ExpressionInterface $expression The expression instance.
-     * @param RuleInterface $rule The rule instance.
+     * @param RuleInterface       $rule       The rule instance.
      *
      * @return OrExpression The result.
      */
@@ -81,7 +81,7 @@ class TraditionalRuleAvailability extends AbstractRuleAvailability
      * 2. The rule given as 2nd argument.
      *
      * @param ExpressionInterface $expression The expression instance.
-     * @param RuleInterface $rule The rule instance.
+     * @param RuleInterface       $rule       The rule instance.
      *
      * @return AndExpression The result.
      */

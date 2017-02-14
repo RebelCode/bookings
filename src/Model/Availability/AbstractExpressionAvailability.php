@@ -2,9 +2,9 @@
 
 namespace RebelCode\Bookings\Model\Availability;
 
-use \Dhii\Expression\LogicalExpressionInterface;
-use \RebelCode\Bookings\Expression\BookingContext;
-use \RebelCode\Diary\BookingInterface;
+use Dhii\Expression\LogicalExpressionInterface;
+use RebelCode\Bookings\Expression\BookingContext;
+use RebelCode\Diary\BookingInterface;
 
 /**
  * Basic functionality for an expression that uses a logical expression to assert whether a

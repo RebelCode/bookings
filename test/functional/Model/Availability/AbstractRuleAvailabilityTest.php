@@ -11,7 +11,6 @@ use Xpmock\TestCase;
  */
 class AbstractRuleAvailabilityTest extends TestCase
 {
-
     /**
      * The name of the test subject.
      *
@@ -49,5 +48,4 @@ class AbstractRuleAvailabilityTest extends TestCase
             static::TEST_SUBJECT_CLASSNAME, $subject, 'Subject is not a valid instance.'
         );
     }
-
 }

@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Model\Availability;
 
-use \RebelCode\Bookings\Model\Availability\AbstractExpressionAvailability;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Model\Availability\AbstractExpressionAvailability;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Model\Availability\AbstractExpressionAvailability}.
@@ -12,7 +12,6 @@ use \Xpmock\TestCase;
  */
 class AbstractExpressionAvailabilityTest extends TestCase
 {
-
     /**
      * The name of the test subject.
      *
@@ -50,5 +49,4 @@ class AbstractExpressionAvailabilityTest extends TestCase
             static::TEST_SUBJECT_CLASSNAME, $subject, 'Subject is not a valid instance.'
         );
     }
-
 }

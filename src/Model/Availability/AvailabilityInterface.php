@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\Model\Availability;
 
-use \RebelCode\Bookings\Framework\Model\ModelInterface;
-use \RebelCode\Bookings\Validation\BookingValidatorInterface;
+use RebelCode\Bookings\Framework\Model\ModelInterface;
+use RebelCode\Bookings\Validation\BookingValidatorInterface;
 
 /**
  * Something that represents an availability.
