@@ -2,22 +2,22 @@
 
 namespace RebelCode\Bookings\FuncTest\Framework\Model;
 
-use RebelCode\Bookings\Framework\Model\GenericModel;
+use RebelCode\Bookings\Framework\Model\BaseModel;
 use Xpmock\TestCase;
 
 /**
- * Tests {@see RebelCode\Bookings\Framework\Model\GenericModel}.
+ * Tests {@see RebelCode\Bookings\Framework\Model\BaseModel}.
  *
  * @since [*next-version*]
  */
-class GenericModelTest extends TestCase
+class BaseModelTest extends TestCase
 {
     /**
      * The name of the test subject.
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Framework\\Model\\GenericModel';
+    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Framework\\Model\\BaseModel';
 
     /**
      * The class name of the abstract resource model interface.
@@ -31,7 +31,7 @@ class GenericModelTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @return GenericModel
+     * @return BaseModel
      */
     public function createInstance()
     {
@@ -72,7 +72,7 @@ class GenericModelTest extends TestCase
 
         $idFieldName = $subject->getIdFieldName();
 
-        $this->assertEquals(GenericModel::DEFAULT_ID_FIELD_NAME, $idFieldName);
+        $this->assertEquals(BaseModel::DEFAULT_ID_FIELD_NAME, $idFieldName);
     }
 
     /**
