@@ -9,7 +9,7 @@ use RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
  *
  * @since [*next-version*]
  */
-class GenericModel extends AbstractModel implements ModelInterface
+class BaseModel extends AbstractModel implements ModelInterface
 {
     /**
      * Constructor.

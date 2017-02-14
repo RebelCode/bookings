@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Model\Availability\Rule;
 
-use RebelCode\Bookings\Framework\Model\GenericModel;
+use RebelCode\Bookings\Framework\Model\BaseModel;
 use RebelCode\Bookings\Framework\Storage\ResourceModelInterface;
 use Traversable;
 
@@ -11,7 +11,7 @@ use Traversable;
  *
  * @since [*next-version*]
  */
-class RuleTypeRegistry extends GenericModel implements RuleTypeRegistryInterface
+class RuleTypeRegistry extends BaseModel implements RuleTypeRegistryInterface
 {
     /**
      * {@inheritdoc}

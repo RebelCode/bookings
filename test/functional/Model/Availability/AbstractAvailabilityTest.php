@@ -50,7 +50,7 @@ class AbstractAvailabilityTest extends TestCase
         );
 
         $this->assertInstanceOf(
-            'RebelCode\\Bookings\\Framework\\Model\\GenericModel', $subject,
+            'RebelCode\\Bookings\\Framework\\Model\\BaseModel', $subject,
             'Subject is not a valid instance.'
         );
 

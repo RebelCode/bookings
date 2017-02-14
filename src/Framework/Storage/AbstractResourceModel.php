@@ -3,14 +3,14 @@
 namespace RebelCode\Bookings\Framework\Storage;
 
 use Dhii\Storage\AdapterInterface;
-use RebelCode\Bookings\Framework\Model\GenericModel;
+use RebelCode\Bookings\Framework\Model\BaseModel;
 
 /**
  * Basic functionality of a resource model.
  *
  * @since [*next-version*]
  */
-class AbstractResourceModel extends GenericModel
+class AbstractResourceModel extends BaseModel
 {
     /**
      * The storage adapter.

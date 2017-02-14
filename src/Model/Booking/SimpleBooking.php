@@ -4,7 +4,7 @@ namespace RebelCode\Bookings\Model\Booking;
 
 use Finite\StatefulInterface;
 use RebelCode\Bookings\Enum\BookingStatus;
-use RebelCode\Bookings\Framework\Model\GenericModel;
+use RebelCode\Bookings\Framework\Model\BaseModel;
 use RebelCode\Diary\BookingInterface;
 
 /**
@@ -18,7 +18,7 @@ use RebelCode\Diary\BookingInterface;
  *
  * @since [*next-version*]
  */
-class SimpleBooking extends GenericModel implements
+class SimpleBooking extends BaseModel implements
     BookingInterface,
     StatefulInterface
 {

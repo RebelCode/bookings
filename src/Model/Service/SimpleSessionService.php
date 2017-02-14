@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Model\Service;
 
-use RebelCode\Bookings\Framework\Model\GenericModel;
+use RebelCode\Bookings\Framework\Model\BaseModel;
 use RebelCode\Bookings\Model\Availability\AvailabilityInterface;
 use RebelCode\Diary\DateTime\PeriodInterface;
 
@@ -14,7 +14,7 @@ use RebelCode\Diary\DateTime\PeriodInterface;
  *
  * @since [*next-version*]
  */
-class SimpleSessionService extends GenericModel implements SessionServiceInterface
+class SimpleSessionService extends BaseModel implements SessionServiceInterface
 {
     /**
      * {@inheritdoc}
