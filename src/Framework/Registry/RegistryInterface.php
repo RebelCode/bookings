@@ -52,5 +52,5 @@ interface RegistryInterface
      *
      * @param string|StringableInterface $key The key of the entry to deregister.
      */
-    public function desregister($key);
+    public function deregister($key);
 }
