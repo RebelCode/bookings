@@ -49,8 +49,6 @@ class AbstractRuleTest extends TestCase
     public function createInstance($eval = false)
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->isNegated()
-            ->getTerms()
             ->bookingObeysRule($eval)
             ->new();
 
