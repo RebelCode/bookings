@@ -36,7 +36,7 @@ abstract class AbstractRule extends AbstractLogicalExpressionModel implements Ru
             throw new EvaluationException(
                 sprintf(
                     '%1$s::%2$s() expects args #1 to be a BookingContext. %2$s given.',
-                    get_called_class(), __METHOD__, get_class($ctx)
+                    get_called_class(), __METHOD__, is_null($ctx)? 'null' : get_class($ctx)
                 )
             );
         }
