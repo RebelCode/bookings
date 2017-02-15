@@ -42,7 +42,7 @@ class AbstractRuleTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @param mixed $eval The evaluation result for `bookingObeysRule()`.
+     * @param mixed $eval The evaluation result for `bookingObeysRule()`. Default: false
      *
      * @return AbstractRule
      */
