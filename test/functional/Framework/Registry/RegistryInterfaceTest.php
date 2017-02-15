@@ -2,8 +2,8 @@
 
 namespace RebelCode\Bookings\FuncTest\Framework\Registry;
 
-use \RebelCode\Bookings\Framework\Registry\RegistryInterface;
-use \Xpmock\TestCase;
+use RebelCode\Bookings\Framework\Registry\RegistryInterface;
+use Xpmock\TestCase;
 
 /**
  * Tests {@see RebelCode\Bookings\Framework\Registry\RegistryInterface}.
@@ -12,7 +12,6 @@ use \Xpmock\TestCase;
  */
 class RegistryInterfaceTest extends TestCase
 {
-
     /**
      * The name of the test subject.
      *
@@ -52,5 +51,4 @@ class RegistryInterfaceTest extends TestCase
             static::TEST_SUBJECT_CLASSNAME, $subject, 'Subject is not a valid instance.'
         );
     }
-
 }

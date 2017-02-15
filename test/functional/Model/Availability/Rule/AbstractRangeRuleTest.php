@@ -39,7 +39,7 @@ class AbstractRangeRuleTest extends TestCase
 
         $mock->setData(array(
             'start' => $start,
-            'end'   => $end,
+            'end' => $end,
         ));
 
         return $mock;
@@ -113,11 +113,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 8;
-        $start    = 5;
-        $end      = 10;
+        $value = 8;
+        $start = 5;
+        $end = 10;
         $startInc = true;
-        $endInc   = true;
+        $endInc = true;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 
@@ -134,11 +134,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 8;
-        $start    = 5;
-        $end      = 10;
+        $value = 8;
+        $start = 5;
+        $end = 10;
         $startInc = false;
-        $endInc   = true;
+        $endInc = true;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 
@@ -155,11 +155,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 8;
-        $start    = 5;
-        $end      = 10;
+        $value = 8;
+        $start = 5;
+        $end = 10;
         $startInc = true;
-        $endInc   = false;
+        $endInc = false;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 
@@ -176,11 +176,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 8;
-        $start    = 5;
-        $end      = 10;
+        $value = 8;
+        $start = 5;
+        $end = 10;
         $startInc = false;
-        $endInc   = false;
+        $endInc = false;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 
@@ -196,11 +196,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 5;
-        $start    = 5;
-        $end      = 10;
+        $value = 5;
+        $start = 5;
+        $end = 10;
         $startInc = true;
-        $endInc   = true;
+        $endInc = true;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 
@@ -217,11 +217,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 5;
-        $start    = 5;
-        $end      = 10;
+        $value = 5;
+        $start = 5;
+        $end = 10;
         $startInc = false;
-        $endInc   = true;
+        $endInc = true;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 
@@ -238,11 +238,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 5;
-        $start    = 5;
-        $end      = 10;
+        $value = 5;
+        $start = 5;
+        $end = 10;
         $startInc = true;
-        $endInc   = false;
+        $endInc = false;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 
@@ -259,11 +259,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 5;
-        $start    = 5;
-        $end      = 10;
+        $value = 5;
+        $start = 5;
+        $end = 10;
         $startInc = false;
-        $endInc   = false;
+        $endInc = false;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 
@@ -279,11 +279,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 10;
-        $start    = 5;
-        $end      = 10;
+        $value = 10;
+        $start = 5;
+        $end = 10;
         $startInc = true;
-        $endInc   = true;
+        $endInc = true;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 
@@ -300,11 +300,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 10;
-        $start    = 5;
-        $end      = 10;
+        $value = 10;
+        $start = 5;
+        $end = 10;
         $startInc = true;
-        $endInc   = false;
+        $endInc = false;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 
@@ -321,11 +321,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 10;
-        $start    = 5;
-        $end      = 10;
+        $value = 10;
+        $start = 5;
+        $end = 10;
         $startInc = false;
-        $endInc   = true;
+        $endInc = true;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 
@@ -342,11 +342,11 @@ class AbstractRangeRuleTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $value    = 10;
-        $start    = 5;
-        $end      = 10;
+        $value = 10;
+        $start = 5;
+        $end = 10;
         $startInc = false;
-        $endInc   = false;
+        $endInc = false;
 
         $inRange = $subject->this()->_isInRange($value, $start, $end, $startInc, $endInc);
 

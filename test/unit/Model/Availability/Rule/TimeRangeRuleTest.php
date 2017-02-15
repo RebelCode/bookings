@@ -15,7 +15,7 @@ use Xpmock\TestCase;
  *
  * @since [*next-version*]
  */
-class TimeRangeRuleTes extends TestCase
+class TimeRangeRuleTest extends TestCase
 {
     /**
      * Creates a new instance of the test subject.
@@ -31,7 +31,7 @@ class TimeRangeRuleTes extends TestCase
     {
         return new TimeRangeRule(array(
             'start' => $start,
-            'end'   => $end
+            'end'   => $end,
         ));
     }
 
