@@ -106,7 +106,7 @@ abstract class AbstractRegistry implements BaseRegistryInterface, ReadableRegist
 
         return true;
     }
-    
+
     /**
      * {@inheritdoc}
      *
