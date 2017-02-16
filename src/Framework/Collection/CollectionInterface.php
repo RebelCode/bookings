@@ -7,14 +7,9 @@ namespace RebelCode\Bookings\Framework\Collection;
  *
  * @since [*next-version*]
  */
-interface CollectionInterface
+interface CollectionInterface extends
+    BaseCollectionInterface,
+    ReadableCollectionInterface,
+    WriteableCollectionInterface
 {
-    /**
-     * Retrieves the items in this collection.
-     *
-     * @since [*next-version*]
-     *
-     * @return array|\Traversable The list of items in this collection.
-     */
-    public function getItems();
 }

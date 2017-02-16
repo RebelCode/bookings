@@ -10,7 +10,7 @@ use Xpmock\TestCase;
  *
  * @since [*next-version*]
  */
-class CollectionInterfaceTest extends TestCase
+class CollectionInterfaceTe extends TestCase
 {
     /**
      * The name of the test subject.
@@ -29,7 +29,16 @@ class CollectionInterfaceTest extends TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
-            ->getItems()
+            ->contains()
+            ->validate()
+            ->get()
+            ->has()
+            ->indexOf()
+            ->items()
+            ->count()
+            ->add()
+            ->remove()
+            ->clear()
             ->new();
 
         return $mock;
@@ -46,6 +55,18 @@ class CollectionInterfaceTest extends TestCase
 
         $this->assertInstanceOf(
             static::TEST_SUBJECT_CLASSNAME, $subject, 'Subject is not a valid instance.'
+        );
+        $this->assertInstanceOf(
+            'RebelCode\\Bookings\\Framework\\Collection\\BaseCollectionInterface',
+            $subject, 'Subject is not a valid BaseCollectionInterface instance.'
+        );
+        $this->assertInstanceOf(
+            'RebelCode\\Bookings\\Framework\\Collection\\ReadableCollectionInterface',
+            $subject, 'Subject is not a valid ReadableCollectionInterface instance.'
+        );
+        $this->assertInstanceOf(
+            'RebelCode\\Bookings\\Framework\\Collection\\WriteableCollectionInterface',
+            $subject, 'Subject is not a valid WriteableCollectionInterface instance.'
         );
     }
 }
