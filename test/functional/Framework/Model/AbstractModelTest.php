@@ -117,11 +117,11 @@ class AbstractModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $reflection = $this->reflect($subject);
+        $reflection              = $this->reflect($subject);
         $reflection->idFieldName = 'some_key';
-        $reflection->data = array(
+        $reflection->data        = array(
             'some_key' => 'test123',
-            'id' => 54321,
+            'id'       => 54321,
         );
 
         $this->assertEquals('test123', $subject->this()->_getId());
@@ -151,7 +151,7 @@ class AbstractModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $reflection = $this->reflect($subject);
+        $reflection              = $this->reflect($subject);
         $reflection->idFieldName = 'some_key';
 
         $reflection->_setId(234);
@@ -180,7 +180,7 @@ class AbstractModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $rm = $this->getMockForAbstractClass(static::RESOURCE_MODEL_CLASSNAME);
+        $rm                             = $this->getMockForAbstractClass(static::RESOURCE_MODEL_CLASSNAME);
         $subject->this()->resourceModel = $rm;
 
         $this->assertEquals($rm, $subject->this()->_getResourceModel());

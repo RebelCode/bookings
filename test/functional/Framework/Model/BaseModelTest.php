@@ -115,8 +115,8 @@ class BaseModelTest extends TestCase
         $subject = $this->createInstance();
 
         $subject->this()->idFieldName = 'some_key';
-        $subject->this()->data = array(
-            'id' => 54321,
+        $subject->this()->data        = array(
+            'id'       => 54321,
             'some_key' => 'test123',
         );
 
@@ -173,7 +173,7 @@ class BaseModelTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $rm = $this->getMockForAbstractClass(static::RESOURCE_MODEL_CLASSNAME);
+        $rm                             = $this->getMockForAbstractClass(static::RESOURCE_MODEL_CLASSNAME);
         $subject->this()->resourceModel = $rm;
 
         $this->assertEquals($rm, $subject->getResourceModel());

@@ -74,7 +74,7 @@ class AbstractRuleTest extends TestCase
             ->new();
 
         // Attributes for comparing instances when asserting equivalence
-        $mock->id = $id;
+        $mock->id   = $id;
         $mock->name = $name;
 
         return $mock;
