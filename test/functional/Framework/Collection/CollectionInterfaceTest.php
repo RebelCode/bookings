@@ -10,7 +10,7 @@ use Xpmock\TestCase;
  *
  * @since [*next-version*]
  */
-class CollectionInterfaceTe extends TestCase
+class CollectionInterfaceTest extends TestCase
 {
     /**
      * The name of the test subject.
