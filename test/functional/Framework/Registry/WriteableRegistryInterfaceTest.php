@@ -30,6 +30,7 @@ class WriteableRegistryInterfaceTest extends TestCase
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
             ->register()
             ->deregister()
+            ->clear()
             ->new();
 
         return $mock;

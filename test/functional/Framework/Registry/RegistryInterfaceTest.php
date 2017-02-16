@@ -38,6 +38,7 @@ class RegistryInterfaceTest extends TestCase
             ->count()
             ->register()
             ->deregister()
+            ->clear()
             ->new();
 
         return $mock;

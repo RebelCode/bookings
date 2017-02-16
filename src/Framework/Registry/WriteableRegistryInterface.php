@@ -31,4 +31,11 @@ interface WriteableRegistryInterface
      * @return bool True if the item was successfully de-registered, false if not.
      */
     public function deregister($key);
+
+    /**
+     * Removes all entries from the registry.
+     *
+     * @since [*next-version*]
+     */
+    public function clear();
 }
