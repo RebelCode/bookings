@@ -29,8 +29,13 @@ class RegistryInterfaceTest extends TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
+            ->contains()
+            ->validate()
             ->get()
             ->has()
+            ->indexOf()
+            ->items()
+            ->count()
             ->register()
             ->deregister()
             ->new();
@@ -49,6 +54,18 @@ class RegistryInterfaceTest extends TestCase
 
         $this->assertInstanceOf(
             static::TEST_SUBJECT_CLASSNAME, $subject, 'Subject is not a valid instance.'
+        );
+        $this->assertInstanceOf(
+            'RebelCode\\Bookings\\Framework\\Registry\\BaseRegistryInterface',
+            $subject, 'Subject is not a valid BaseRegistryInterface instance.'
+        );
+        $this->assertInstanceOf(
+            'RebelCode\\Bookings\\Framework\\Registry\\ReadableRegistryInterface',
+            $subject, 'Subject is not a valid ReadableRegistryInterface instance.'
+        );
+        $this->assertInstanceOf(
+            'RebelCode\\Bookings\\Framework\\Registry\\WriteableRegistryInterface',
+            $subject, 'Subject is not a valid WriteableRegistryInterface instance.'
         );
     }
 }
