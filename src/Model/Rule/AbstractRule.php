@@ -20,16 +20,6 @@ abstract class AbstractRule extends AbstractLogicalExpressionModel implements Ru
      *
      * @since [*next-version*]
      */
-    public function getType()
-    {
-        return $this->getData('type', null);
-    }
-
-    /**
-     * {@inheritdoc}
-     *
-     * @since [*next-version*]
-     */
     public function evaluate(ValueAwareInterface $ctx = null)
     {
         if (!$ctx instanceof BookingContext) {

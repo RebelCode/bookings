@@ -24,13 +24,6 @@ class AbstractRuleTest extends TestCase
     const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Model\\Rule\\AbstractRule';
 
     /**
-     * The interface name for a rule type.
-     *
-     * @since [*next-version*]
-     */
-    const RULE_TYPE_INTERFACE = 'RebelCode\\Bookings\\Model\\Rule\\RuleTypeInterface';
-
-    /**
      * The interface name for a booking.
      *
      * @since [*next-version*]
@@ -51,31 +44,6 @@ class AbstractRuleTest extends TestCase
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
             ->bookingObeysRule($eval)
             ->new();
-
-        return $mock;
-    }
-
-    /**
-     * Creates a mock for a rule type instance.
-     *
-     * @since [*next-version*]
-     *
-     * @param string $id   The rule type ID.
-     * @param string $name The rule type name.
-     *
-     * @return RuleTypeInterface
-     */
-    public function mockRuleType($id, $name)
-    {
-        $mock = $this->mock(static::RULE_TYPE_INTERFACE)
-            ->getId($id)
-            ->getName($id)
-            ->createRule()
-            ->new();
-
-        // Attributes for comparing instances when asserting equivalence
-        $mock->id   = $id;
-        $mock->name = $name;
 
         return $mock;
     }
@@ -113,25 +81,6 @@ class AbstractRuleTest extends TestCase
             'RebelCode\\Bookings\\Model\\Rule\\RuleInterface',
             $subject, 'Subject is not a valid RuleInterface instance.'
         );
-    }
-
-    /**
-     * Tests the rule type getter method to ensure that the correct value and instance
-     * are returned.
-     *
-     * @since [*next-version*]
-     */
-    public function testgetType()
-    {
-        $subject = $this->createInstance();
-
-        $ruleType = $this->mockRuleType('test', 'Test Type');
-
-        $subject->setData(array(
-            'type' => $ruleType,
-        ));
-
-        $this->assertTrue($ruleType === $subject->getType());
     }
 
     /**
