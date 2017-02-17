@@ -1,12 +1,12 @@
 <?php
 
-namespace RebelCode\Bookings\FuncTest\Model\Availability\Rule;
+namespace RebelCode\Bookings\FuncTest\Model\Rule;
 
-use RebelCode\Bookings\Model\Availability\Rule\RuleInterface;
+use RebelCode\Bookings\Model\Rule\RuleInterface;
 use Xpmock\TestCase;
 
 /**
- * Tests {@see RebelCode\Bookings\Model\Availability\Rule\RuleInterface}.
+ * Tests {@see RebelCode\Bookings\Model\Rule\RuleInterface}.
  *
  * @since [*next-version*]
  */
@@ -17,7 +17,7 @@ class RuleInterfaceTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Model\\Availability\\Rule\\RuleInterface';
+    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Model\\Rule\\RuleInterface';
 
     /**
      * Creates a new instance of the test subject.

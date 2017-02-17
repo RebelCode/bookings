@@ -2,7 +2,7 @@
 
 namespace RebelCode\Bookings\Model\Availability;
 
-use RebelCode\Bookings\Model\Availability\Rule\RuleInterface;
+use RebelCode\Bookings\Model\Rule\RuleInterface;
 
 /**
  * An availability implementation that uses an expression that consists of rules

@@ -4,7 +4,7 @@ namespace RebelCode\Bookings\Test\Model\Availability;
 
 use Dhii\Espresso\Expression\AndExpression;
 use Dhii\Espresso\Expression\OrExpression;
-use RebelCode\Bookings\Model\Availability\Rule\RuleInterface;
+use RebelCode\Bookings\Model\Rule\RuleInterface;
 use RebelCode\Bookings\Model\Availability\TraditionalRuleAvailability;
 use Xpmock\TestCase;
 
@@ -38,7 +38,7 @@ class TraditionalRuleAvailabilityTest extends TestCase
      */
     public function mockRule($negated)
     {
-        $mock = $this->mock('RebelCode\\Bookings\\Model\\Availability\\Rule\\RuleInterface')
+        $mock = $this->mock('RebelCode\\Bookings\\Model\\Rule\\RuleInterface')
             ->evaluate()
             ->getTerms()
             ->isNegated($negated)

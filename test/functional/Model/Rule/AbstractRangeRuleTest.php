@@ -1,13 +1,13 @@
 <?php
 
-namespace RebelCode\Bookings\FuncTest\Model\Availability\Rule;
+namespace RebelCode\Bookings\FuncTest\Model\Rule;
 
 use Dhii\Espresso\Term\LiteralTerm;
-use RebelCode\Bookings\Model\Availability\Rule\AbstractRangeRule;
+use RebelCode\Bookings\Model\Rule\AbstractRangeRule;
 use Xpmock\TestCase;
 
 /**
- * Tests {@see RebelCode\Bookings\Model\Availability\Rule\AbstractRangeRule}.
+ * Tests {@see RebelCode\Bookings\Model\Rule\AbstractRangeRule}.
  *
  * @since [*next-version*]
  */
@@ -18,7 +18,7 @@ class AbstractRangeRuleTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Model\\Availability\\Rule\\AbstractRangeRule';
+    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Model\\Rule\\AbstractRangeRule';
 
     /**
      * Creates a new instance of the test subject.

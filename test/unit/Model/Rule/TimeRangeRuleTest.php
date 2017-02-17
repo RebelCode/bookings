@@ -1,9 +1,9 @@
 <?php
 
-namespace RebelCode\Bookings\Test\Model\Availability\Rule;
+namespace RebelCode\Bookings\Test\Model\Rule;
 
 use RebelCode\Bookings\Expression\BookingContext;
-use RebelCode\Bookings\Model\Availability\Rule\TimeRangeRule;
+use RebelCode\Bookings\Model\Rule\TimeRangeRule;
 use RebelCode\Diary\Booking;
 use RebelCode\Diary\DateTime\DateTime;
 use RebelCode\Diary\DateTime\DateTimeInterface;
@@ -11,7 +11,7 @@ use RebelCode\Diary\DateTime\Period;
 use Xpmock\TestCase;
 
 /**
- * Tests {@see RebelCode\Bookings\Model\Availability\Rule\TimeRangeRule}.
+ * Tests {@see RebelCode\Bookings\Model\Rule\TimeRangeRule}.
  *
  * @since [*next-version*]
  */

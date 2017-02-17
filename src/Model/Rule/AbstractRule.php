@@ -1,6 +1,6 @@
 <?php
 
-namespace RebelCode\Bookings\Model\Availability\Rule;
+namespace RebelCode\Bookings\Model\Rule;
 
 use Dhii\Data\ValueAwareInterface;
 use Dhii\Espresso\EvaluationException;

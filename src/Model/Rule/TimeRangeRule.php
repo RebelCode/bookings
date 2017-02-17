@@ -1,6 +1,6 @@
 <?php
 
-namespace RebelCode\Bookings\Model\Availability\Rule;
+namespace RebelCode\Bookings\Model\Rule;
 
 use RebelCode\Diary\BookingInterface;
 use RebelCode\Diary\DateTime\DateTime;

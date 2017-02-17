@@ -6,7 +6,7 @@ use Dhii\Espresso\AbstractGenericLogicalExpression;
 use Dhii\Espresso\Expression\AndExpression;
 use Dhii\Espresso\Expression\OrExpression;
 use Dhii\Expression\ExpressionInterface;
-use RebelCode\Bookings\Model\Availability\Rule\RuleInterface;
+use RebelCode\Bookings\Model\Rule\RuleInterface;
 
 /**
  * A rule availability implementation that works in the same way that EDD Bookings

@@ -1,16 +1,16 @@
 <?php
 
-namespace RebelCode\Bookings\FuncTest\Model\Availability\Rule;
+namespace RebelCode\Bookings\FuncTest\Model\Rule;
 
 use Dhii\Espresso\Context\RawContext;
 use RebelCode\Bookings\Expression\BookingContext;
-use RebelCode\Bookings\Model\Availability\Rule\AbstractRule;
-use RebelCode\Bookings\Model\Availability\Rule\RuleTypeInterface;
+use RebelCode\Bookings\Model\Rule\AbstractRule;
+use RebelCode\Bookings\Model\Rule\RuleTypeInterface;
 use RebelCode\Diary\BookingInterface;
 use Xpmock\TestCase;
 
 /**
- * Tests {@see RebelCode\Bookings\Model\Availability\Rule\AbstractRule}.
+ * Tests {@see RebelCode\Bookings\Model\Rule\AbstractRule}.
  *
  * @since [*next-version*]
  */
@@ -21,14 +21,14 @@ class AbstractRuleTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Model\\Availability\\Rule\\AbstractRule';
+    const TEST_SUBJECT_CLASSNAME = 'RebelCode\\Bookings\\Model\\Rule\\AbstractRule';
 
     /**
      * The interface name for a rule type.
      *
      * @since [*next-version*]
      */
-    const RULE_TYPE_INTERFACE = 'RebelCode\\Bookings\\Model\\Availability\\Rule\\RuleTypeInterface';
+    const RULE_TYPE_INTERFACE = 'RebelCode\\Bookings\\Model\\Rule\\RuleTypeInterface';
 
     /**
      * The interface name for a booking.
@@ -110,7 +110,7 @@ class AbstractRuleTest extends TestCase
             static::TEST_SUBJECT_CLASSNAME, $subject, 'Subject is not a valid instance.'
         );
         $this->assertInstanceOf(
-            'RebelCode\\Bookings\\Model\\Availability\\Rule\\RuleInterface',
+            'RebelCode\\Bookings\\Model\\Rule\\RuleInterface',
             $subject, 'Subject is not a valid RuleInterface instance.'
         );
     }
