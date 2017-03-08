@@ -2,6 +2,8 @@
 
 namespace RebelCode\Bookings\Framework\Data;
 
+use Dhii\Data\IdAwareInterface;
+
 /**
  * A data object that can have an ID.
  *

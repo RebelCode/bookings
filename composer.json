@@ -20,7 +20,8 @@
         "myclabs/php-enum": "^1.5",
         "yohang/finite": "^1.1",
         "rebelcode/diary": "dev-task/api-refactoring_1",
-        "container-interop/container-interop": "^1.1"
+        "container-interop/container-interop": "^1.1",
+        "dhii/data-identifiable-interface": "^0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
