@@ -60,7 +60,7 @@ class IdAwareDataObjectInterfaceTest extends TestCase
         );
 
         $this->assertInstanceOf(
-            'RebelCode\\Bookings\\Framework\\Data\\IdAwareInterface', $subject,
+            'Dhii\\Data\\IdAwareInterface', $subject,
             'Subject is not a valid IdAwareInterface instance.'
         );
     }
