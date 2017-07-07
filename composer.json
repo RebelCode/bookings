@@ -10,6 +10,7 @@
         }
     ],
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "RebelCode\\Bookings\\": "src/"
@@ -31,7 +32,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/RebelcodeCom/diary"
+            "url": "https://github.com/RebelCode/diary"
         },
         {
             "type": "vcs",
